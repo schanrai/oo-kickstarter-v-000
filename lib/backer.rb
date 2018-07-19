@@ -6,11 +6,11 @@ class Backer
     @name = name
     @backed_projects = []
   end
-  
-#project_a already created in back end as an instance of Project so it has all the properties + methods 
+
+#project_a already created in back end as an instance of Project so it has all the properties + methods
   def back_project(project_a)
     @backed_projects << project_a
-    project_a.backers << self #this is the line that makes the association between the project instance and the backer
+    project_a.backers << self #this is the line that makes the association between the project instance and the backer instance
   end
 
   def self.all
